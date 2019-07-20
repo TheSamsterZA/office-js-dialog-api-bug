@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>The Dialog</title>
+  <base href="/">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <!-- Required to use OfficeJS APIs -->
+  <script src="//appsforoffice.microsoft.com/lib/1.1/hosted/office.js"></script>
+  <script>
+    Office.onReady()
+    .then(() => {
+      console.log('OfficeJS load in dialog');
+    })
+  </script>
+  <script>
+    function onClick() {
+      var host = window.location.host;
+      var protocol = window.location.protocol;
+      var url = `${protocol}//${host}/index.html`;
+      console.log('Redirect back');
+      window.location.assign(url);
+    }
+  </script>
+</head>
+
+<body>
+
+  <h1>Hello from Dialog</h1>
+  <button onclick="javascript:onClick()">Send message to parent</button>
+
+</body>
+
+</html>
