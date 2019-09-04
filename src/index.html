@@ -20,6 +20,34 @@
 
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 
+  <!-- BEGIN TRACKJS -->
+  <script type="text/javascript">
+    window._trackJs = {
+      token: "82ec5e06598345968e17ed24281a791d",
+      application: "office-addins",
+      callback: {
+        bindStack: true // set to false if perf suffers too much
+      },
+      onError: function (payload, error) {
+        payload.metadata.push(
+          {
+            key: "Office Application",
+            value: "Outlook"
+          },
+          {
+            key: "LEAP Brand",
+            value: "LEAP"
+          }
+        );
+
+        return true; // Ensure error gets sent
+      }
+
+      // other configuration
+    };
+  </script>
+  <script type="text/javascript" src="https://cdn.trackjs.com/releases/current/tracker.js"></script>
+  <!-- END TRACKJS -->
 </head>
 
 <body>
