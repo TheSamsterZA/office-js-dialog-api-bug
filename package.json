@@ -10,7 +10,8 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "build:dev": "ng build --aot --stats",
-    "serve:dev": "ng serve --aot --output-hashing=none --environment=dev --target=development --live-reload false --port 3000 --ssl --ssl-key ssl\\development-certificate.key --ssl-cert ssl\\development-certificate.crt"
+    "serve:dev": "ng serve --aot --output-hashing=none --environment=dev --target=development --live-reload false --port 3000 --ssl --ssl-key ssl\\development-certificate.key --ssl-cert ssl\\development-certificate.crt",
+    "validate-manifest": "npx office-addin-validator ./src/manifest.xml"
   },
   "private": true,
   "dependencies": {
