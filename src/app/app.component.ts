@@ -9,7 +9,7 @@ export class AppComponent {
 
   openDialog() {
     const { host, protocol } = window.location;
-    const url = `${protocol}//${host}/dialog.html`;
+    const url = `https://auth-test.leap.services/oauth/authorize?client_id=S639FGYFEDPLHTWM&redirect_uri=https://outlookapp-dist-leapaws.s3-ap-southeast-2.amazonaws.com/index.html&scope=*&response_type=token&newsession&view_target=outlook_android&isInDialog=true`;
     const options = { width: 30, height: 30, displayInIframe: false };
     //const options = { width: 30, height: 30, displayInIframe: false, promptBeforeOpen: true },
     //const options = { width: 30, height: 30, displayInIframe: false, promptBeforeOpen: false },
